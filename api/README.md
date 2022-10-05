@@ -55,7 +55,7 @@ PGUSER=usuariodepostgres
 
   __IMPORTANTE__: La aplicación escucha en el puerto 1234, las peticiones se deben hacer en la url local  `http://localHost:1234/` seguido de la ruta que se desea consultar.
 
-  ### Consideraciones para crear un departamento 
+  ### Consideraciones para crear un departamento y empleados 
 
   - Para crear un departamento debemos enviar un objeto JSON con las propiedades, nombre y presupuesto como se muestra en la imagen 
 
@@ -66,4 +66,15 @@ PGUSER=usuariodepostgres
   - Y obtendremos una respuesta donde se indica que el departamento fue creado y veremos que responde un objeto JSON, con una propiedad adicional que es el código del Departamento  
   <p align="left">
   <img height="100" src="./assets/respuestaPostDepartamento.png" />
+</p>
+
+  - Para crear un empleado debemos enviar un objeto JSON con las propiedades, nombre, apellido1, apellido2, nif, DepartamentoCodigo que corresponde a el codigo de departamento al que pertenece el empleado, como se muestra en la imagen 
+
+<p align="left">
+  <img height="100" src="./assets/modeloJsonEmpleado.png" />
+</p>
+
+  - Y obtendremos una respuesta donde se indica que el empleado fue creado y veremos que responde un objeto JSON, con una propiedad adicional que es el código del empleado  
+  <p align="left">
+  <img height="100" src="./assets/respuestaPostEmpleado.png" />
 </p>
