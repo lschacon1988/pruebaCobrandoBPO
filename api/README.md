@@ -22,8 +22,10 @@ DB_HOST=localhost
 
 #### Las pruebas se realisaron con postman pero podria funcionar con cualquier aplicacion de este tipo
 
-- Las rutas a las que se deben hacer las peticiones el CRUD de un departamento:
+#### Las rutas a las que se deben hacer las peticiones realizar un CRUD de un departamento:
 
+
+  - **post('/departamentos')**: Para crear un departamento.
 
   - **get('/departamentos')**: obtenemos todos los departamentos.
 
@@ -31,9 +33,21 @@ DB_HOST=localhost
 
    - **get('/departamentos/:codigo/empleados')**: optenemos todos los empleados que pertenecen a un departamento. 
 
-  - **post('/departamentos')**: Para crear un departamento.
 
    - **put('/departamentos/:codigo')**: para acctualizar un departamento.
 
   - **delete('/departamentos/:codigo')**: para eliminar un departamento.
 
+#### Las rutas a las que se deben hacer las peticiones para realizar un CRUD de un empleado:
+
+- **post('/empleado')**: Para crear un empleado.
+
+  - **get('/empleados')**: obtenemos todos los empleados.
+
+  - **get('/empleados/:codigo')**: obtenemos un empleado en particular, que coincida con el codigo de empleado parsado por la url.
+
+   - **put('/empleados/:codigo')**: para acctualizar un empledo, que coincida con el codigo de empleado parsado por la url.
+
+  - **delete('/empleados/:codigo')**: para eliminar un empleado, que coincida con el codigo de empleado parsado por la url.
+
+  __IMPORTANTE__: La aplicacion escucha en el puerto 1234, las pedticiones se deben hacer en la url local  `http://localHost:1234/` seguido de la ruta que se desea consultar 
