@@ -3,6 +3,9 @@ import { DataTypes } from "sequelize";
 import { sequelize } from "../db.js";
 
 
+/**define la estructura del modelo de empleados en la
+ * en la base de datos
+*/
 export const Empleados = sequelize.define('empleados',{
     codigo:{
         type: DataTypes.UUID,

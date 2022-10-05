@@ -3,7 +3,9 @@ import { DataTypes } from "sequelize";
 import { sequelize } from "../db.js";
 import { Empleados } from "./Empleado.js";
 
-
+/**define la estructura del modelo de Departamentos en la
+ * en la base de datos
+*/
 export const Departamentos = sequelize.define('Departamentos',{
     codigo:{
         type: DataTypes.UUID,
@@ -19,9 +21,9 @@ export const Departamentos = sequelize.define('Departamentos',{
     }
 },{timestamps: false})
 
-/** estamos estableciondo una relacion de uno a muchos
+/** se establece una relacion de uno a muchos
  * donde un departamento puede tener muchos empleados y 
- * un empleado puede pertenecer solo aun departamento 
+ * un empleado puede pertenecer solo a un departamento 
  */
 Departamentos.hasMany(Empleados,{
     foreingKey: 'codigo_departamento',

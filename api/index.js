@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import { sequelize } from "./src/db.js";
 dotenv.config()
 
+/**punto de entrada de la app levanta la app */
 
 const PORT = process.env.PORT || 1234;
 
